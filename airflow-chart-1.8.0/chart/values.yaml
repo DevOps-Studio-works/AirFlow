@@ -821,8 +821,8 @@ createUserJob:
   topologySpreadConstraints: []
   # In case you need to disable the helm hooks that create the jobs after install.
   # Disable this if you are using ArgoCD for example
-  useHelmHooks: true
-  applyCustomEnv: true
+  useHelmHooks: false
+  applyCustomEnv: false
 
   env: []
 
@@ -851,7 +851,8 @@ migrateDatabaseJob:
   # Annotations on the database migration pod
   annotations: {}
   # jobAnnotations are annotations on the database migration job
-  jobAnnotations: {}
+  jobAnnotations: 
+    "argocd.argoproj.io/hook": Sync
 
   # When not set, the values defined in the global securityContext will be used
   securityContext: {}
@@ -891,8 +892,8 @@ migrateDatabaseJob:
   topologySpreadConstraints: []
   # In case you need to disable the helm hooks that create the jobs after install.
   # Disable this if you are using ArgoCD for example
-  useHelmHooks: true
-  applyCustomEnv: true
+  useHelmHooks: false
+  applyCustomEnv: false
 
 # Airflow webserver settings
 webserver:
