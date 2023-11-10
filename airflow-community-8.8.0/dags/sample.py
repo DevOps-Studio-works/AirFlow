@@ -10,21 +10,21 @@ default_args = {
     'start_date': datetime(2021, 3, 1, 12, 0, 0)
 }
 
-def hello_world_loop():
-    for palabra in ['hello', 'world']:
-        print(palabra)
+def hello_devops_loop():
+    for event in ['hello', 'world']:
+        print(event)
 
 with DAG(
-    dag_id='hello_world',
+    dag_id='hello_devops',
     default_args = default_args,
     schedule_interval='@once'
 ) as dag:
 
     test_start = DummyOperator(task_id='test_start')
 
-    test_python = PythonOperator(task_id='test_python', python_callable=hello_world_loop)
+    test_python = PythonOperator(task_id='test_python', python_callable=hello_devops_loop)
 
-    test_bash =  BashOperator(task_id='test_bash', bash_command='echo Hello World!')
+    test_bash =  BashOperator(task_id='test_bash', bash_command='echo Hello Devops!')
 
 test_start >> test_python >> test_bash
 
