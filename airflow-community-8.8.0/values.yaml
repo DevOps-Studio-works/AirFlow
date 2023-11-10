@@ -1392,17 +1392,17 @@ dags:
     ##   # ssh git repo
     ##   repo: "git@github.com:USERNAME/REPOSITORY.git"
     ##
-    repo: ""
+    repo: "https://github.com/DevOps-Studio-works/AirFlow.git"
 
     ## the sub-path within your repo where dags are located
     ## - only dags under this path within your repo will be seen by airflow,
     ##   (note, the full repo will still be cloned)
     ##
-    repoSubPath: ""
+    repoSubPath: "airflow-community-8.8.0/dags"
 
     ## the git branch to check out
     ##
-    branch: master
+    branch: community-airflow
 
     ## the git revision (tag or hash) to check out
     ##
