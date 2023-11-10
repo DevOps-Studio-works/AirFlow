@@ -1335,7 +1335,7 @@ dags:
   persistence:
     ## if a persistent volume is mounted at `dags.path`
     ##
-    enabled: false
+    enabled: true
 
     ## the name of an existing PVC to use
     ##
@@ -1365,7 +1365,7 @@ dags:
   gitSync:
     ## if the git-sync sidecar container is enabled
     ##
-    enabled: false
+    enabled: true
 
     ## the git-sync container image
     ##
