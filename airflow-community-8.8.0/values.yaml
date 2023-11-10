@@ -1335,7 +1335,7 @@ dags:
   persistence:
     ## if a persistent volume is mounted at `dags.path`
     ##
-    enabled: true
+    enabled: false
 
     ## the name of an existing PVC to use
     ##
