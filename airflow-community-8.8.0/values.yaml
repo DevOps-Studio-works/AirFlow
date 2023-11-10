@@ -1398,7 +1398,7 @@ dags:
     ## - only dags under this path within your repo will be seen by airflow,
     ##   (note, the full repo will still be cloned)
     ##
-    repoSubPath: "airflow-community-8.8.0/dags"
+    repoSubPath: "/airflow-community-8.8.0/dags"
 
     ## the git branch to check out
     ##
