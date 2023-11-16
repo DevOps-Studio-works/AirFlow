@@ -1392,8 +1392,9 @@ dags:
     ##   # ssh git repo
     ##   repo: "git@github.com:USERNAME/REPOSITORY.git"
     ##
-    repo: "https://github.com/DevOps-Studio-works/AirFlow.git"
-
+    #repo: "https://github.com/DevOps-Studio-works/AirFlow.git"
+    repo: "git@github.com:DevOps-Studio-works/AirFlow.git"
+    
     ## the sub-path within your repo where dags are located
     ## - only dags under this path within your repo will be seen by airflow,
     ##   (note, the full repo will still be cloned)
@@ -1427,19 +1428,19 @@ dags:
 
     ## the name of a pre-created Secret with git http credentials
     ##
-    httpSecret: "airflow-http-git-secret"
+    #httpSecret: "airflow-http-git-secret"
 
     ## the key in `dags.gitSync.httpSecret` with your git username
     ##
-    httpSecretUsernameKey: username
+    #httpSecretUsernameKey: username
 
     ## the key in `dags.gitSync.httpSecret` with your git password/token
     ##
-    httpSecretPasswordKey: password
+    #httpSecretPasswordKey: password
 
     ## the name of a pre-created Secret with git ssh credentials
     ##
-    sshSecret: ""
+    sshSecret: "airflow-ssh-git-secret"
 
     ## the key in `dags.gitSync.sshSecret` with your ssh-key file
     ##
